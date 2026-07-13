@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Банкеты * Асбест</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="static/logo_banket.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span class="logo-text">Банкеты<br><small>Асбест</small></span>
+                </a>
+                <nav class="nav">
+                    <a href="#halls">Залы</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#contact">Контакты</a>
+                </nav>
+                <a href="#contact" class="btn-primary">Забронировать</a>
+            </div>
+        </div>
+    </header>
+
+<!-- ========== HERO С ФОТО И БЛЮРОМ ========== -->
+<section class="hero">
+    <!-- ФОНОВОЕ ИЗОБРАЖЕНИЕ (ЗАМЕНИТЕ НА СВОЁ) -->
+    <div class="hero-bg">
+        <img src="static/img/banquet-bg.jpg" alt="Банкетный зал" />
+    </div>
+
+    <!-- ТЁМНЫЙ СЛОЙ ПОВЕРХ ФОТО -->
+    <div class="hero-overlay-dark"></div>
+
+    <div class="container hero-container">
+        <div class="hero-content">
+            <!-- БЛОК С ТЕКСТОМ И БЛЮРОМ -->
+            <div class="hero-glass">
+                <span class="hero-tag">✦ Премиум-сервис</span>
+                <h1 class="hero-title">
+                    Идеальный банкет<br />
+                    <span>в атмосфере роскоши</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Эксклюзивные залы для свадеб, юбилеев, корпоративов и поминок.<br />
+                    Вместимость до 120 гостей.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#halls" class="btn-primary btn-lg">Выбрать зал</a>
+                    <a href="#contact" class="btn-outline btn-lg">Связаться</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- СКРОЛЛ-ИНДИКАТОР -->
+    <div class="hero-scroll">
+        <span>Листайте вниз</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+    <!-- ========== ЗАЛЫ ========== -->
+    <section class="halls" id="halls">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">✦ наши залы</span>
+                <h2 class="section-title">Выберите <span>идеальное пространство</span></h2>
+                <p class="section-subtitle">Четыре зала для мероприятий любого формата</p>
+            </div>
+
+            <div class="halls-grid">
+
+                <!-- Зал 1 -->
+                <div class="hall-card">
+                    <div class="hall-image">
+                        <img src="static/img/ban_7.jpg" alt="Уютный зал" />
+                        <div class="hall-badge">До 25 чел.</div>
+                        <div class="hall-overlay">
+                            <span class="hall-overlay-icon">🍾</span>
+                            <span class="hall-overlay-text">Уютный зал</span>
+                        </div>
+                    </div>
+                    <div class="hall-info">
+                        <h3 class="hall-title">Уютный зал</h3>
+                        <p class="hall-address">Асбест, ул. Плеханова, 62</p>
+                        <p class="hall-capacity">👥 До 25 человек</p>
+                        <p class="hall-desc">Камерная атмосфера для семейных торжеств и деловых ужинов.</p>
+                        <a href="#contact" class="btn-hall">Забронировать</a>
+                    </div>
+                </div>
+
+                <!-- Зал 2 -->
+                <div class="hall-card">
+                    <div class="hall-image">
+                        <img src="static/img/ban_45.jpg" alt="Просторный зал" />
+                        <div class="hall-badge">До 70 чел.</div>
+                        <div class="hall-overlay">
+                            <span class="hall-overlay-icon">🥂</span>
+                            <span class="hall-overlay-text">Просторный зал</span>
+                        </div>
+                    </div>
+                    <div class="hall-info">
+                        <h3 class="hall-title">Просторный зал</h3>
+                        <p class="hall-address">Асбест, ул. Труда, 23</p>
+                        <p class="hall-capacity">👥 До 70 человек</p>
+                        <p class="hall-desc">Идеален для свадеб, корпоративов и юбилеев среднего масштаба.</p>
+                        <a href="#contact" class="btn-hall">Забронировать</a>
+                    </div>
+                </div>
+
+                <!-- Зал 3 -->
+                <div class="hall-card">
+                    <div class="hall-image">
+                        <img src="static/img/ban_10.jpg" alt="Современный зал" />
+                        <div class="hall-badge">До 50 чел.</div>
+                        <div class="hall-overlay">
+                            <span class="hall-overlay-icon">✨</span>
+                            <span class="hall-overlay-text">Современный зал</span>
+                        </div>
+                    </div>
+                    <div class="hall-info">
+                        <h3 class="hall-title">Современный зал</h3>
+                        <p class="hall-address">п. Рефтинский, ул. Гагарина, 18а</p>
+                        <p class="hall-capacity">👥 До 50 человек</p>
+                        <p class="hall-desc">Стильный интерьер для мероприятий в современном формате.</p>
+                        <a href="#contact" class="btn-hall">Забронировать</a>
+                    </div>
+                </div>
+
+                <!-- Зал 4 -->
+                <div class="hall-card">
+                    <div class="hall-image">
+                        <img src="static/img/ban_9.jpg" alt="Гранд-зал" />
+                        <div class="hall-badge">До 120 чел.</div>
+                        <div class="hall-overlay">
+                            <span class="hall-overlay-icon">🏛️</span>
+                            <span class="hall-overlay-text">Гранд-зал</span>
+                        </div>
+                    </div>
+                    <div class="hall-info">
+                        <h3 class="hall-title">Гранд-зал</h3>
+                        <p class="hall-address">п. Рефтинский, ДК, ул. Гагарина, 10а</p>
+                        <p class="hall-capacity">👥 До 120 человек</p>
+                        <p class="hall-desc">Флагманский зал для масштабных мероприятий и премиум-событий.</p>
+                        <a href="#contact" class="btn-hall">Забронировать</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== УСЛУГИ ========== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">✦ возможности</span>
+                <h2 class="section-title">Премиум-услуги <span>для вашего праздника</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💍</div>
+                    <h3 class="service-title">Свадьбы</h3>
+                    <p class="service-desc">Организация свадебного банкета «под ключ» с индивидуальным меню и декором.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎂</div>
+                    <h3 class="service-title">Юбилеи</h3>
+                    <p class="service-desc">Тёплые и душевные юбилеи с учётом всех ваших пожеланий.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Корпоративы</h3>
+                    <p class="service-desc">Профессиональная организация корпоративных мероприятий любого уровня.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🕊️</div>
+                    <h3 class="service-title">Поминки</h3>
+                    <p class="service-desc">Достойная и уединённая атмосфера для поминальных обедов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ГАЛЕРЕЯ ========== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">✦ галерея</span>
+                <h2 class="section-title">Вдохновение <span>для вашего праздника</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-lg">
+                    <img src="static/img/ban_1.jpg" alt="Банкет" />
+                </div>
+                <div class="gallery-item">
+                    <img src="static/img/ban_2.jpg" alt="Декор" />
+                </div>
+                <div class="gallery-item">
+                    <img src="static/img/ban_3.jpg" alt="Стол" />
+                </div>
+                <div class="gallery-item">
+                    <img src="static/img/ban_4.jpg" alt="Свадьба" />
+                </div>
+                <div class="gallery-item">
+                    <img src="static/img/ban_5.jpg" alt="Интерьер" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== КОНТАКТЫ ========== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">✦ связь</span>
+                    <h2 class="section-title">Обсудим <span>ваш праздник</span></h2>
+                    <p class="contact-text">Оставьте заявку, и мы подберём идеальный зал, меню и декор для вашего мероприятия.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <span class="contact-label">Телефон</span>
+                                <span class="contact-value">+7 (912) 637-10-19</span>
+                                <br>
+                                <span class="contact-value">+7 (904) 387-36-09</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">obpit@yandex.ru</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <span class="contact-label">Адрес</span>
+                                <span class="contact-value">Асбест, ул. Плеханова, 62</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/obpit@yandex.ru" method="POST">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Телефон" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Комментарий или пожелания"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-lg">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ФУТЕР ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="logo-text">Банкеты<br><small>Асбест</small></span>
+                    <p class="footer-desc">Организация банкетов и мероприятий.</p>
+                </div>
+                <div class="footer-addresses">
+                    <p><strong>Адреса:</strong></p>
+                    <p>Асбест, Плеханова 62</p>
+                    <p>Асбест, Труда 23</p>
+                    <p>п. Рефтинский, Гагарина 18а</p>
+                    <p>п. Рефтинский, ДК Гагарина 10а</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://vk.ru/dostavka232109190">VK Кафе "Сиеста"</a>
+                    <a href="https://max.ru/join/1Qzn4WErTTTqWSRiMogDlc5fRQ21rMOiSakYc3ZPqcs">MAX</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Банкеты Асбест. Все права защищены.</p>
+                <a href="https://ekz3ma.github.io" class="footer-copy">make by ekz3ma</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

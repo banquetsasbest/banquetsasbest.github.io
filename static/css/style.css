@@ -1,0 +1,896 @@
+/* ========================================
+   БАЗА — ПРЕМИУМ
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a2e;
+    background: #fcf9f6;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========================================
+   ТИПОГРАФИКА
+======================================== */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c0392b;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.section-title span {
+    color: #c0392b;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* ========================================
+   КНОПКИ
+======================================== */
+.btn-primary {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary:hover {
+    background: #a93226;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(192, 57, 43, 0.35);
+}
+
+.btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    padding: 14px 36px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #1a1a2e;
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+.btn-lg {
+    padding: 16px 44px;
+    font-size: 16px;
+}
+
+.btn-hall {
+    display: inline-block;
+    background: transparent;
+    color: #c0392b;
+    padding: 10px 28px;
+    border: 1.5px solid #c0392b;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-hall:hover {
+    background: #c0392b;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.25);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 0;
+    background: rgba(26, 26, 46, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: all 0.3s ease;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: #c0392b;
+}
+
+.logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.logo-text small {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    color: rgba(255,255,255,0.5);
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.nav a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+/* ========================================
+   HERO С ФОТО И БЛЮРОМ
+======================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 60px;
+}
+
+/* --- ФОНОВОЕ ИЗОБРАЖЕНИЕ --- */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- ТЁМНЫЙ СЛОЙ ПОВЕРХ ФОТО --- */
+.hero-overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 26, 0.55);
+    /* Полупрозрачный тёмный слой */
+    z-index: 1;
+}
+
+/* --- КОНТЕЙНЕР ДЛЯ КОНТЕНТА --- */
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+/* --- СТЕКЛЯННЫЙ БЛОК (GLASSMORPHISM) --- */
+.hero-glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 48px 56px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hero-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c0392b;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-title {
+    font-size: 58px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-title span {
+    color: #c0392b;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 520px;
+    margin-bottom: 32px;
+    font-weight: 300;
+    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* --- СКРОЛЛ-ИНДИКАТОР --- */
+.hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 3;
+    font-family: 'Inter', sans-serif;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ (HERO)
+======================================== */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 46px;
+    }
+
+    .hero-glass {
+        padding: 36px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-glass {
+        padding: 28px 24px;
+        border-radius: 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-scroll {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-glass {
+        padding: 20px 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
+
+/* ========================================
+   ЗАЛЫ
+======================================== */
+.halls {
+    padding: 100px 0;
+    background: #fcf9f6;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.halls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.hall-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hall-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.hall-image {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    background: #f0ede8;
+}
+
+.hall-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.hall-card:hover .hall-image img {
+    transform: scale(1.03);
+}
+
+.hall-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(26,26,46,0.8);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.hall-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 24px 24px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hall-overlay-icon {
+    font-size: 22px;
+}
+
+.hall-overlay-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hall-info {
+    padding: 24px 28px 28px;
+}
+
+.hall-title {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.hall-address {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+    font-weight: 300;
+}
+
+.hall-capacity {
+    font-size: 14px;
+    color: #c0392b;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hall-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ========================================
+   УСЛУГИ
+======================================== */
+.services {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 44px 24px;
+    border-radius: 16px;
+    background: #fcf9f6;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.04);
+}
+
+.service-icon {
+    font-size: 44px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.service-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.service-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ========================================
+   ГАЛЕРЕЯ
+======================================== */
+.gallery {
+    padding: 100px 0;
+    background: #fcf9f6;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 16px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f0ede8;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-item-lg {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* ========================================
+   КОНТАКТЫ
+======================================== */
+.contact {
+    padding: 100px 0;
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info .section-title {
+    color: #fff;
+}
+
+.contact-text {
+    color: rgba(255,255,255,0.6);
+    font-size: 17px;
+    margin-bottom: 32px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-icon {
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    font-weight: 300;
+}
+
+.contact-value {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.contact-form .form-group {
+    margin-bottom: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #c0392b;
+    background: rgba(255,255,255,0.08);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.25);
+}
+
+/* ========================================
+   ФУТЕР
+======================================== */
+.footer {
+    background: #0f0f1a;
+    padding: 50px 0 20px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .logo-text {
+    font-size: 22px;
+    color: #fff;
+}
+
+.footer-brand .logo-text small {
+    font-size: 11px;
+}
+
+.footer-desc {
+    color: rgba(255,255,255,0.3);
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 300;
+}
+
+.footer-addresses p {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+
+.footer-addresses p strong {
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-social a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-weight: 300;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    text-align: center;
+}
+
+.footer-copy {
+    color: rgba(255,255,255,0.2);
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+======================================== */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+    }
+
+    .gallery-item-lg {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    .halls-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
