@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
+    <script src="static/js/script.js"></script>
 
     <!-- ========== HEADER ========== -->
     <header class="header">
@@ -23,6 +24,7 @@
                     <a href="#services">Услуги</a>
                     <a href="#gallery">Галерея</a>
                     <a href="#contact">Контакты</a>
+                    <a href="#menu-page">Меню</a>
                 </nav>
                 <a href="#contact" class="btn-primary">Забронировать</a>
             </div>
@@ -272,6 +274,708 @@
         </div>
     </section>
 
+<!-- ========== МЕНЮ ========== -->
+    <section class="menu-page" id="menu-page">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">✦ банкетное меню</span>
+                <h1 class="section-title">Изысканные блюда <span>для вашего праздника</span></h1>
+                <p class="section-subtitle">Шеф-повар подготовил для вас лучшие кулинарные шедевры</p>
+            </div>
+
+            <!-- ===== НАВИГАЦИЯ ПО МЕНЮ ===== -->
+            <div class="menu-nav">
+                <button class="menu-nav-btn active" data-category="salads">🥗 Салаты</button>
+                <button class="menu-nav-btn" data-category="cold">🥩 Холодные закуски</button>
+                <button class="menu-nav-btn" data-category="hot">🔥 Горячие закуски</button>
+                <button class="menu-nav-btn" data-category="meat">🥩 Мясные блюда</button>
+                <button class="menu-nav-btn" data-category="fish">🐟 Рыбные блюда</button>
+                <button class="menu-nav-btn" data-category="pizza">🍕 Пицца</button>
+                <button class="menu-nav-btn" data-category="garnish">🍚 Гарниры</button>
+                <button class="menu-nav-btn" title="Скачать меню" onclick="triggerDownload('static/menu.docx')"><img src="static/down_ico.svg" width="25px" height="25px" alt="Скачать меню"></button>
+
+                <script>
+                    function triggerDownload(fileName) {
+                      var element = document.createElement('a');
+                      element.setAttribute('href', fileName);
+                      element.setAttribute('download', fileName);
+                      element.style.display = 'none';
+                      document.body.appendChild(element);
+
+                      element.click();
+                      document.body.removeChild(element);
+                    }
+                </script>
+
+            </div>
+
+            <!-- ===== САЛАТЫ ===== -->
+            <div class="menu-category active" id="salads">
+                <h2 class="menu-category-title">🥗 Салаты</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Корона Урала»</span>
+                            <span class="menu-item-price">380 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">ветчина, говядина отварная, филе куры, корнишоны, кедровый орех, майонез</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Морской»</span>
+                            <span class="menu-item-price">380 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">кальмары, крабовое мясо, икра красная, майонез</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Цезарь классический»</span>
+                            <span class="menu-item-price">380 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">филе куры, помидоры черри, сыр твердый, салат «Айсберг», сухарики, заправка</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Цезарь с креветкой»</span>
+                            <span class="menu-item-price">400 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">королевские креветки, помидоры черри, салат «Айсберг», сыр твердый, сухарики, заправка</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Греческий»</span>
+                            <span class="menu-item-price">300 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">огурцы свежие, томаты свежие, перец болгарский, сыр фета, маслины, масло оливковое</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Коктейль особый»</span>
+                            <span class="menu-item-price">300 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">копченная грудка, огурцы свежие, яйцо, сыр, майонез, грецкие орехи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Капрезе»</span>
+                            <span class="menu-item-price">300 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">сыр Моцарелла, томаты свежие, базилик, бальзамический уксус, масло оливковое</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Гранатовый браслет»</span>
+                            <span class="menu-item-price">350 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">филе куры отварное, свекла отварная, морковь, картофель, яйцо, гранат, грецкие орехи, чернослив</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Оливье домашний»</span>
+                            <span class="menu-item-price">350 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">говядина отварная, картофель отварной, огурец консервированный, зеленый горошек, майонез</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Сельдь под шубой»</span>
+                            <span class="menu-item-price">250 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">сельдь, картофель отварной, свекла отварная, майонез, зелень</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Орхидея»</span>
+                            <span class="menu-item-price">300 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">ветчина, грибы, морковь по-корейски, сыр твердый, картофельные чипсы, майонез</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Гурман»</span>
+                            <span class="menu-item-price">400 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">филе куры отварное, язык отварной, грибы консервированные, карбонат, горчичная заправка</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Столичный»</span>
+                            <span class="menu-item-price">300 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">мясо птицы, картофель отварной, огурец консервированный, майонез</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Оригинальный»</span>
+                            <span class="menu-item-price">300 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">филе куры, омлет, огурец консервированный, яйцо перепелиное, майонез</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Купеческий»</span>
+                            <span class="menu-item-price">450 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">язык отварной, буженина, томаты вяленые, соус фирменный</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Гамберетти» (ужин по-сицилийски)</span>
+                            <span class="menu-item-price">450 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">ананасы, тигровые креветки, шампиньоны жареные, сыр Моцарелла</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Старорусский»</span>
+                            <span class="menu-item-price">400 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">тигровая креветка на гриле, подпеченный лосось, салатный микс, зеленый соус</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">«Салат с рукколой и баклажанами»</span>
+                            <span class="menu-item-price">350 ₽</span>
+                        </div>
+                        <p class="menu-item-desc">руккола, баклажаны запеченные, кедровые орехи, черри</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ХОЛОДНЫЕ ЗАКУСКИ ===== -->
+            <div class="menu-category" id="cold">
+                <h2 class="menu-category-title">🥩 Холодные закуски</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Ассорти мясное</span>
+                            <span class="menu-item-price">350 ₽ / 70г</span>
+                        </div>
+                        <p class="menu-item-desc">буженина, карбонат, сырокопченые колбасы, зелень</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Ассорти из свежих овощей</span>
+                            <span class="menu-item-price">300 ₽ / 70г</span>
+                        </div>
+                        <p class="menu-item-desc">помидор черри, огурец, свежий редис, травы, микс салата</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Ассорти рыбное</span>
+                            <span class="menu-item-price">450 ₽ / 70г</span>
+                        </div>
+                        <p class="menu-item-desc">слабосоленая семга, масляная рыба, лимоны, маслины</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Ассорти</span>
+                            <span class="menu-item-price">250 ₽ / 70г</span>
+                        </div>
+                        <p class="menu-item-desc">малосольные огурцы с чесноком, зелень, помидоры черри, квашенная капуста</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Сырная тарелка</span>
+                            <span class="menu-item-price">450 ₽ / 70/30г</span>
+                        </div>
+                        <p class="menu-item-desc">3 вида сыра с грецкими орехами, виноград с медом</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Язык говяжий с хреном и горчицей</span>
+                            <span class="menu-item-price">400 ₽ / 70/30г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Русская закуска</span>
+                            <span class="menu-item-price">250 ₽ / 100г</span>
+                        </div>
+                        <p class="menu-item-desc">слабосоленая сельдь, отварной картофель, красный лук, укроп</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Рулетики из баклажан, фаршированные грецким орехом</span>
+                            <span class="menu-item-price">150 ₽ / 70г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Корейская закуска с морепродуктами</span>
+                            <span class="menu-item-price">350 ₽ / 70/30г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Блинный сет</span>
+                            <span class="menu-item-price">250 ₽ / 70г</span>
+                        </div>
+                        <p class="menu-item-desc">с м/соленой семгой, мягким сыром, с красной икрой</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Грузди соленые со сметаной и луком</span>
+                            <span class="menu-item-price">250 ₽ / 70/30г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Икра красная</span>
+                            <span class="menu-item-price">200 ₽ / 50г</span>
+                        </div>
+                        <p class="menu-item-desc">в тарталетках или канапе или в блинчиках</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Заливное (говядина)</span>
+                            <span class="menu-item-price">400 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Заливное (свинина)</span>
+                            <span class="menu-item-price">350 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Заливное (курица или индейка)</span>
+                            <span class="menu-item-price">300 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Заливное из рыбного ассорти</span>
+                            <span class="menu-item-price">500 ₽ / 100г</span>
+                        </div>
+                        <p class="menu-item-desc">судак, семга, горбуша</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Щука фаршированная</span>
+                            <span class="menu-item-price">300 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Канапе с сырокопченой колбасой и свежим огурцом</span>
+                            <span class="menu-item-price">150 ₽ / 50г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Канапе с карбонатом и соленым огурцом</span>
+                            <span class="menu-item-price">150 ₽ / 50г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Канапе с масляной рыбой и оливкой</span>
+                            <span class="menu-item-price">150 ₽ / 50г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Канапе с семгой на тосте с лимоном</span>
+                            <span class="menu-item-price">180 ₽ / 50г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Тарталетка с с/с семгой и творожным сыром</span>
+                            <span class="menu-item-price">250 ₽ / 80г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Тарталетка с крабовым паштетом</span>
+                            <span class="menu-item-price">120 ₽ / 50г</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ГОРЯЧИЕ ЗАКУСКИ ===== -->
+            <div class="menu-category" id="hot">
+                <h2 class="menu-category-title">🔥 Горячие закуски</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Шашлык из свинины с острым соусом</span>
+                            <span class="menu-item-price">300 ₽ / 100/20г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Шашлык из королевских креветок с черри и соусом чим-чим</span>
+                            <span class="menu-item-price">350 ₽ / 75/20г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Шашлык из индейки с острым соусом</span>
+                            <span class="menu-item-price">300 ₽ / 100/20г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Шашлык из курицы с кунжутом и соусом терияки</span>
+                            <span class="menu-item-price">300 ₽ / 100/20г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Шашлык из сёмги с лимоном и соусом терияки</span>
+                            <span class="menu-item-price">750 ₽ / 100/20г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Запеченная горбуша под сыром</span>
+                            <span class="menu-item-price">300 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Семга, запеченная с клубникой на шпажке</span>
+                            <span class="menu-item-price">750 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Креветки королевские гриль с соусом Песто и прованскими травами</span>
+                            <span class="menu-item-price">300 ₽ / 50/30г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Жульен с курицей и грибами</span>
+                            <span class="menu-item-price">250 ₽ / 80г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Жульен грибной в тарталетке</span>
+                            <span class="menu-item-price">250 ₽ / 100г</span>
+                        </div>
+                        <p class="menu-item-desc">со сливками и сыром</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Блинчики-мешочки с мясом</span>
+                            <span class="menu-item-price">250 ₽ / 120г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Горбуша в кляре</span>
+                            <span class="menu-item-price">300 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Цветная капуста в кляре</span>
+                            <span class="menu-item-price">250 ₽ / 100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Кальмары в кляре</span>
+                            <span class="menu-item-price">300 ₽ / 150/30г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Пельмени домашние ручной лепки в горшочках со сметаной</span>
+                            <span class="menu-item-price">300 ₽ / 200г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Пельмени из сёмги ручной лепки</span>
+                            <span class="menu-item-price">500 ₽ / 200г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Паста карбонара с беконом</span>
+                            <span class="menu-item-price">350 ₽ / 250г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Фаршированные шампиньоны с сыром и ветчиной</span>
+                            <span class="menu-item-price">150 ₽ / 80г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Картофель фри</span>
+                            <span class="menu-item-price">150 ₽ / 150г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Наггетсы</span>
+                            <span class="menu-item-price">150 ₽ / 150г</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== МЯСНЫЕ БЛЮДА ===== -->
+            <div class="menu-category" id="meat">
+                <h2 class="menu-category-title">🥩 Мясные блюда</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Шницель из индейки с шалфеем и овощами-гриль</span>
+                            <span class="menu-item-price">380 ₽ / 120/100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Куриная грудка в миндальной панировке со свежими овощами</span>
+                            <span class="menu-item-price">350 ₽ / 120/100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Филе куриное под сырной корочкой</span>
+                            <span class="menu-item-price">350 ₽ / 120/10г</span>
+                        </div>
+                        <p class="menu-item-desc">грибы, яблоки, ананас консервированный</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Медальоны из говяжьей вырезки с гранатовым соусом</span>
+                            <span class="menu-item-price">750 ₽ / 120/30г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Телятина с пряностями</span>
+                            <span class="menu-item-price">750 ₽ / 120/100г</span>
+                        </div>
+                        <p class="menu-item-desc">корица, гвоздика, горчица дижонская, сливки, гарнир овощи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Антрекот с шампиньонами</span>
+                            <span class="menu-item-price">610 ₽ / 120/100г</span>
+                        </div>
+                        <p class="menu-item-desc">гарнир картофель, запеченный дольками</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Говяжий язык под яблочным соусом</span>
+                            <span class="menu-item-price">650 ₽ / 120/100г</span>
+                        </div>
+                        <p class="menu-item-desc">яблоки, морковь, корень петрушки, лук репчатый, цедра лимона, гарнир овощи-гриль</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Жаркое по-домашнему в горшочке</span>
+                            <span class="menu-item-price">450 ₽ / 250г</span>
+                        </div>
+                        <p class="menu-item-desc">телятина, картофель, морковь, грибы</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Котлета новомосковская</span>
+                            <span class="menu-item-price">500 ₽ / 200/100г</span>
+                        </div>
+                        <p class="menu-item-desc">куриное филе, сливочное масло, панировочные сухари, гарнир картофель фри</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Говядина запеченная с вишней в мятном соусе</span>
+                            <span class="menu-item-price">650 ₽ / 150/100г</span>
+                        </div>
+                        <p class="menu-item-desc">гарнир овощи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Медальоны из мяса свинины с вишневым соусом</span>
+                            <span class="menu-item-price">450 ₽ / 120/100г</span>
+                        </div>
+                        <p class="menu-item-desc">гарнир овощи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Свинина по-дворянски под сырной корочкой</span>
+                            <span class="menu-item-price">350 ₽ / 150г</span>
+                        </div>
+                        <p class="menu-item-desc">с грибами, помидорами, ананасами, яблоками</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Эскалоп жареный</span>
+                            <span class="menu-item-price">350 ₽ / 120/100г</span>
+                        </div>
+                        <p class="menu-item-desc">гарнир овощи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Мясо по-французски с картофелем и грибами</span>
+                            <span class="menu-item-price">350 ₽ / 300г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Филе утки, запеченное в цитрусово-гранатовом соусе</span>
+                            <span class="menu-item-price">450 ₽ / 130/100г</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== РЫБНЫЕ БЛЮДА ===== -->
+            <div class="menu-category" id="fish">
+                <h2 class="menu-category-title">🐟 Рыбные блюда</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Стейк из лосося гриль</span>
+                            <span class="menu-item-price">750 ₽ / 150/100г</span>
+                        </div>
+                        <p class="menu-item-desc">гарнир паровые овощи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Семга в пакете со сливочно-икорным соусом</span>
+                            <span class="menu-item-price">850 ₽ / 150/50г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Треска запеченная по-испански</span>
+                            <span class="menu-item-price">700 ₽ / 150/100г</span>
+                        </div>
+                        <p class="menu-item-desc">филе трески, сухари, апельсин, чеснок, отварной картофель</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Рыба Дорада запеченная с овощами с соусом Песто</span>
+                            <span class="menu-item-price">900 ₽ / 300г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Рыба Судак в грецких орехах и цедре</span>
+                            <span class="menu-item-price">550 ₽ / 150/100г</span>
+                        </div>
+                        <p class="menu-item-desc">гарнир овощи</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Окунь морской с травами и отварным картофелем</span>
+                            <span class="menu-item-price">700 ₽ / 150/100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Форель с грибным соусом, зеленью и овощами</span>
+                            <span class="menu-item-price">700 ₽ / 200/100г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Осетрина в белом вине с овощами</span>
+                            <span class="menu-item-price">1200 ₽ / 150/100г</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ПИЦЦА ===== -->
+            <div class="menu-category" id="pizza">
+                <h2 class="menu-category-title">🍕 Пицца</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Домашняя</span>
+                            <span class="menu-item-price">750 ₽ / 1000г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Грибная</span>
+                            <span class="menu-item-price">750 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Грибная с копченой курицей</span>
+                            <span class="menu-item-price">800 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Маргарита</span>
+                            <span class="menu-item-price">500 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Три сыра</span>
+                            <span class="menu-item-price">650 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Греческая</span>
+                            <span class="menu-item-price">650 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Пикантная</span>
+                            <span class="menu-item-price">650 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Охотничья</span>
+                            <span class="menu-item-price">650 ₽ / 600г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">С тигровыми креветками</span>
+                            <span class="menu-item-price">900 ₽ / 600г</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ГАРНИРЫ ===== -->
+            <div class="menu-category" id="garnish">
+                <h2 class="menu-category-title">🍚 Гарниры</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Овощи рататуй</span>
+                            <span class="menu-item-price">250 ₽ / 150г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Картофель, запеченный с сыром</span>
+                            <span class="menu-item-price">200 ₽ / 150г</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Рис с овощами</span>
+                            <span class="menu-item-price">150 ₽ / 100г</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- ========== ФУТЕР ========== -->
     <footer class="footer">
         <div class="container">
